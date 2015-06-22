@@ -5,9 +5,89 @@
 	<title>Vertica Spacing helper css file</title>
 
 	<link rel="stylesheet" href="css/vspacing.css">
+
+	<style>
+		/* 
+			Simple styling for test 
+			This is just for preview You should not use this styles
+		*/
+
+		* {
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+		}
+
+		body {
+			background-color: #fafafa;
+		}
+
+		.container {
+			width:920px;
+			margin:40px auto;
+			padding:40px 0;
+			min-height: 100vh;
+			background-color: #fff;
+		}
+
+		.box {
+			width:320px;
+			height:180px;
+			margin:0 auto;
+		}
+
+		.box.red {
+			background-color: red;
+		}
+
+		.box.blue {
+			background-color: blue;
+		}
+
+		.box.yellow {
+			background-color: yellow;
+		}
+
+		@media (max-width: 992px) {
+			.container {
+				width:100%;
+				margin:0;
+			}
+		}
+		
+
+		/* 
+			Caution : Just for the preview to show you spacing 
+			while you are resizing the browser 
+		*/
+		.trans {
+			/* Transition for preview */
+			transition: all 0.25s;
+			-webkit-transition: all 0.25s;
+		}
+
+	</style>
 </head>
 <body>
 	
-	Yo Bitches!
+	<div class="container">
+		<div class="box blue"></div><!-- End .blue -->
+		
+		<!--  Margin bottom for larger screens 150px -->
+		<!--  Margin bottom for small screens 100px -->
+		<!--  Margin bottom for extra small screens 50px -->
+		<div class="mr-bt-lg-150 mr-bt-sm-100 mr-bt-xs-50 trans"></div><!-- space -->
+
+		<div class="box red"></div><!-- End .red -->
+
+		<!--  Margin top for larger screens 150px -->
+		<!--  Margin top for small screens 100px -->
+		<!--  Margin top for extra small screens 50px -->
+		<div class="mr-tp-lg-150 mr-tp-sm-100 mr-tp-xs-50 trans"></div><!-- space -->
+
+
+		<div class="box yellow"></div><!-- End .yellow -->
+	</div><!-- End .container -->
 </body>
 </html>
